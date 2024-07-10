@@ -1,3 +1,147 @@
 .footer {
 	background-color: #15161a;
+	display: flex;
+	height: 10vh;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	z-index: 3;
+	
+	div {
+		flex: 1;
+	}
+	p {
+		position: relative;
+  		display: inline-block;
+		color: grey;
+	}
+
+	#logo {
+		padding: 0.5rem;
+        position: relative; 
+        width: 4rem;
+		height: 4rem;
+        display: flex;
+        flex-direction: column; 
+        align-items: left;
+        transition: transform 0.5s ease;
+		color: grey;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid grey;
+			color: #e88301;
+            transition: transform 0.5s ease;
+		}
+
+        &:hover{
+			color: white;
+			
+			&::before {
+				border: 1px solid #e88301;
+				transform: rotate(90deg);
+			}
+			
+		}
+
+    }
+
+	
+
+	#nabthat {
+		text-align: center;
+		p {
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				width: 20px;
+				height: 1px;
+				background-color: grey;
+			}
+			
+			&::before {
+				left: -30px;
+			}
+			&::after {
+				right: -30px;
+			}
+		}
+	}
+
+	.select {
+		height: 100%;
+
+		.selection-button {
+			display: flex; // Enables flexbox layout
+			justify-content: center; // Centers the button horizontally
+			align-items: center; 
+			background-color: #15161a;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+
+			button {
+				background-color: #15161a;
+				color: white;
+				border: none;
+				width: 10rem;
+				font-size: 1.5rem;
+				cursor: pointer;
+				padding: 1rem 2rem;
+				position: relative;
+				z-index: 2;
+				transition: background-color 0.5s ease;
+				&:hover {
+					background-color: #e88301;
+				}
+			}
+		}
+		
+		.selection-viewport {
+			position: absolute;
+			padding: 1rem;
+			right: 0;
+			width: 10rem;
+			top: 0;
+			background-color: white;
+			display: flex;
+			flex-direction: column;
+			transform: translateY(0%);
+			transition: transform 0.5s ease;
+			z-index: 1;
+
+			p {
+				margin: 0;
+				padding: 0;
+				font-size: 1rem;
+				cursor: pointer;
+				transition: color 0.5s ease;
+				&:hover {
+					color: #e88301;
+				}
+			}
+		}
+
+		.is-viewport-visible {
+			transform: translateY(-100%);
+		}
+		
+	}
+		
+	
 }
+
+@media (max-width: 768px) {
+	.footer #nabthat {
+	  display: none;
+	}
+  }

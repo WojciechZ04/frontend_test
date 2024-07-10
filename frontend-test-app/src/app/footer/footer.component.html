@@ -1,11 +1,22 @@
 <div class="footer">
-  <div class="logo">
-    <p>CSS IS AWESOME</p>
+  <div >
+    <div id="logo">
+
+      <span>CSS</span>
+      <span>IS</span>
+      <span>AWESOME</span>
+    </div>
   </div>
-  <div>
+  <div id="nabthat">
     <p>nabthat</p>
   </div>
-  <div>
-	<button>POKAŻ</button>
+  <div class="select">
+    <div class="selection-button">
+      <button (click)="toggleViewport()">POKAŻ</button>
+    </div>
+    <div class="selection-viewport" [class.is-viewport-visible]="isViewportVisible">
+      <p (click)="reset()">> ZRESETUJ USTAWIENIA</p>
+      <p>> POKAŻ DANE OSOBOWE</p>
+    </div>
   </div>
 </div>
