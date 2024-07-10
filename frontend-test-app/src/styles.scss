@@ -13,3 +13,5 @@ p {
     margin-inline-end: 0; /* Override default margin at the end of an inline */
     unicode-bidi: normal; /* Override default unicode-bidi if needed */
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

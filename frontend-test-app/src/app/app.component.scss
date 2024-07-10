@@ -1,11 +1,35 @@
 .content {
 	background-color: #2a2d36;
+	padding: 1rem;
 	height: 100vh;
+
+	h1 {
+		font-weight: 400;
+		text-align: center;
+		margin: 0;
+		padding: 1rem;
+		text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	}
+
+	hr {
+		width: 10rem;
+	}
 }
 
-h1 {
-	margin: 0;
-}
+.blocks {
+	display: flex;
+	flex-wrap: wrap; /* Allows items to wrap to the next line on small screens */
+	justify-content: space-between; /* Adjusts the spacing between the blocks */
+  }
+	
+  .block {
+	padding: 3rem;
+	flex: 1 1 25vw; /* Adjusted flex property */
+	/* flex-grow: 0; Prevents the block from growing */
+	/* flex-shrink: 1; Allows the block to shrink if necessary */
+	/* flex-basis: 250px; Sets the default size of the element before the remaining space is distributed */
+	min-width: 300px; /* Minimum width before wrapping */
+  }
 
 .footer {
 	height: 60px;
