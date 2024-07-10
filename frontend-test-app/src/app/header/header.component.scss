@@ -2,20 +2,41 @@
 	display: flex;
   	justify-content: space-between;
  	align-items: center;
+	position: sticky;
+	top: 0;
   	padding: 1rem 2rem;
   	background-color: #0b0c10;
-}
 
-.icon {
-	background-color: #e88301;
-	width: 6rem; // Example size, adjust as needed
-    height: 6rem; // Same as width to create a circle
-    border-radius: 50%;
-	display: flex;
-    justify-content: center;
-    align-items: center;
-	i {
-		font-size: 4rem; /* Adjust the size as needed */
-		color: #fefefe;
+	#personalData{
+		font-weight: 100;
+	}
+
+	.right-content {
+		text-align: right;
+		font-size: 1.5rem; /* Adjust the size as needed */
+	}
+
+	.icon {
+		cursor: pointer;
+		background-color: #303030;
+		width: 6rem; // Example size, adjust as needed
+		height: 6rem; // Same as width to create a circle
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:hover {
+			background-color: #e88301;
+			a {
+				font-size: 4.5rem;
+			}
+		}
+		a {
+			font-size: 4rem; /* Adjust the size as needed */
+			color: #fefefe;
+		}
 	}
 }
+
+
+
