@@ -1,0 +1,21 @@
+.header {
+	display: flex;
+  	justify-content: space-between;
+ 	align-items: center;
+  	padding: 1rem 2rem;
+  	background-color: #0b0c10;
+}
+
+.icon {
+	background-color: #e88301;
+	width: 6rem; // Example size, adjust as needed
+    height: 6rem; // Same as width to create a circle
+    border-radius: 50%;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	i {
+		font-size: 4rem; /* Adjust the size as needed */
+		color: #fefefe;
+	}
+}

@@ -1,0 +1,14 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: #fefefe;
+}
+
+p {
+    display: block;
+    margin-block-start: 0; /* Override default margin at the start of a block */
+    margin-block-end: 0; /* Override default margin at the end of a block */
+    margin-inline-start: 0; /* Override default margin at the start of an inline */
+    margin-inline-end: 0; /* Override default margin at the end of an inline */
+    unicode-bidi: normal; /* Override default unicode-bidi if needed */
+}
