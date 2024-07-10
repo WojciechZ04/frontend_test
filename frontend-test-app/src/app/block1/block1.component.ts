@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
-import { MatRadioModule } from '@angular/material/radio';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-block1',
-  standalone: true,
-  imports: [MatRadioModule],
   templateUrl: './block1.component.html',
   styleUrl: './block1.component.scss'
 })
 export class Block1Component {
+  selectedOption: string = '';
+  @Output() optionSelected = new EventEmitter<string>();
 
+  constructor() {}
+
+  onRadioChange(): void {
+    console.log("Selected option:", this.selectedOption);
+    this.optionSelected.emit(this.selectedOption);
+  }
 }

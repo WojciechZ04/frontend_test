@@ -1,13 +1,13 @@
 <div class="block">
   <h2>BLOK PIERWSZY</h2>
   <div class="custom-radio-group">
-    <input type="radio" id="option1" name="customRadio" value="1">
+    <input type="radio" id="option1" name="customRadio" [(ngModel)]="selectedOption" value="1" (change)="onRadioChange()">
     <label for="option1">Opcja pierwsza</label>
     
-    <input type="radio" id="option2" name="customRadio" value="2">
+    <input type="radio" id="option2" name="customRadio" [(ngModel)]="selectedOption" value="2" (change)="onRadioChange()">
     <label for="option2">Opcja druga</label>
     
-    <input type="radio" id="option3" name="customRadio" value="3">
+    <input type="radio" id="option3" name="customRadio" [(ngModel)]="selectedOption" value="3" (change)="onRadioChange()">
     <label for="option3">Opcja losowa</label>
   </div>
 </div>
