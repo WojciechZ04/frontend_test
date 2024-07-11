@@ -1,5 +1,5 @@
-<app-header [isPersonalDataVisible]="isPersonalDataVisible"></app-header>
 <main class="main">
+<app-header [isPersonalDataVisible]="isPersonalDataVisible"></app-header>
   <div class="content">
     <h1>Nagłówek H1</h1>
     <hr />
@@ -16,5 +16,5 @@
       <app-block3 class="block" [data]="receivedData"></app-block3>
     </div>
   </div>
+  <app-footer (showPersonalDetails)="onShowPersonalDetails()"></app-footer>
 </main>
-<app-footer (showPersonalDetails)="onShowPersonalDetails()"></app-footer>
