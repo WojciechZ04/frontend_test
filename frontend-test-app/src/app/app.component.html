@@ -5,8 +5,8 @@
     <hr/>
     <div class="blocks">
       <app-block1 class="block" (optionSelected)="onOptionSelected($event)"></app-block1>
-      <app-block2 class="block" ></app-block2>
-      <app-block3 class="block" ></app-block3>
+      <app-block2 class="block" (dataSent)="onReceiveData($event)" [radioSelection]="selectedOption"></app-block2>
+      <app-block3 class="block" [data]="receivedData"></app-block3>
     </div>
   </div>
 </main>

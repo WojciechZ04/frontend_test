@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Data } from './shared/data.model';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend-test-app';
-
-  selectedOptionFromBlock1: string = '';
+  clickedButtonValue: number = 0;
+  selectedOption: string = '';
+  receivedData: Data[] = [];
 
   onOptionSelected(selectedOption: string): void {
-    this.selectedOptionFromBlock1 = selectedOption;
+    this.selectedOption = selectedOption;
+  }
+
+  onReceiveData(data: Data[]): void {
+    this.receivedData = data;
   }
 }

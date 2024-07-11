@@ -1,15 +1,24 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {
+  Component,
+  OnChanges,
+  SimpleChanges,
+  Input,
+} from '@angular/core';
+import { Data } from '../shared/data.model';
 
 @Component({
   selector: 'app-block3',
   templateUrl: './block3.component.html',
-  styleUrl: './block3.component.scss'
+  styleUrl: './block3.component.scss',
 })
-export class Block3Component implements OnInit {
-  constructor(private http: HttpClient) {}
+export class Block3Component {
+  @Input() data: Data[] = [];
 
-  ngOnInit(): void {
-      
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('Changes detected:', changes);
+
+    if ((changes['data'])) {
+      console.log();
+    }
   }
 }

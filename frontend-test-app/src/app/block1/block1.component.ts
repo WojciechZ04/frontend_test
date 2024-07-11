@@ -13,7 +13,6 @@ export class Block1Component {
   constructor() {}
 
   onRadioChange(): void {
-    console.log("Selected option:", this.selectedOption);
     this.optionSelected.emit(this.selectedOption);
   }
 }
