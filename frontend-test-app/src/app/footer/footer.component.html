@@ -28,5 +28,13 @@
       <i class="fas fa-angle-right"></i>
       {{ isPersonalDataVisible ? "UKRYJ" : "POKAŻ" }} DANE OSOBOWE
     </p>
+    <p (click)="openCreateModal()">
+      <i class="fas fa-angle-right"></i>
+      DODAJ DANE DO LOCALSTORAGE
+    </p>
+    <p (click)="openEditModal()">
+      <i class="fas fa-angle-right"></i>
+      EDYTUJ DANE W LOCALSTORAGE
+    </p>
   </div>
 </div>

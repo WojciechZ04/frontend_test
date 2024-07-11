@@ -16,5 +16,7 @@
       <app-block3 class="block" [data]="receivedData"></app-block3>
     </div>
   </div>
-  <app-footer (showPersonalDetails)="onShowPersonalDetails()"></app-footer>
+  <app-footer (showPersonalDetails)="onShowPersonalDetails()" (showCreateModal)="onShowCreateModal()" (showEditModal)="onShowEditModal()"></app-footer>
+  <app-create-modal [isShowCreateModalVisible]="isShowCreateModalVisible" (showCreateModal)="onShowCreateModal()"></app-create-modal>
+  <app-edit-modal [isShowEditModalVisible]="isShowEditModalVisible" (showEditModal)="onShowEditModal()"></app-edit-modal>
 </main>

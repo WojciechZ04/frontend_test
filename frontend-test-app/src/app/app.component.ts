@@ -13,6 +13,9 @@ export class AppComponent implements OnInit{
   selectedOption: string = '';
   receivedData: Data[] = [];
   isPersonalDataVisible: boolean = false;
+  isShowCreateModalVisible: boolean = false;
+  isShowEditModalVisible: boolean = false;
+
 
   constructor(private http: HttpClient) {}
 
@@ -35,5 +38,19 @@ export class AppComponent implements OnInit{
 
   onShowPersonalDetails(): void {
     this.isPersonalDataVisible = !this.isPersonalDataVisible;
+  }
+
+  onShowCreateModal(): void {
+    this.isShowCreateModalVisible = !this.isShowCreateModalVisible;
+    if (this.isShowEditModalVisible) {
+      this.isShowEditModalVisible = false;
+    }
+  }
+
+  onShowEditModal(): void {
+    this.isShowEditModalVisible = !this.isShowEditModalVisible;
+    if (this.isShowCreateModalVisible) {
+      this.isShowCreateModalVisible = false;
+    }
   }
 }

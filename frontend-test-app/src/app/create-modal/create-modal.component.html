@@ -1,0 +1,10 @@
+<div class="modal-background" *ngIf="isShowCreateModalVisible">
+  <div class="modal-content">
+	<label for="textarea">Wpisz dane do zapisania w localStorage:</label>
+    <textarea [(ngModel)]="inputValue"></textarea>
+	<div class="buttons">
+		<button (click)="saveData()">Zapisz</button>
+		<button (click)="closeCreateModal()">Anuluj</button>
+	</div>
+  </div>
+</div>

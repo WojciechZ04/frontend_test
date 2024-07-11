@@ -18,15 +18,9 @@ export class Block2Component implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    const storedData = localStorage.getItem('myData');
-    if (storedData) {
-      this.completeData = JSON.parse(storedData);
-    } else {
-      console.log('No data found in localStorage. Reload the page.');
-    }
-
-      this.pushRandomData();
-      this.sendDataOnInit();
+    this.fetchData();
+    this.pushRandomData();
+    this.sendDataOnInit();
   }
 
   sendDataOnInit(): void {
@@ -34,6 +28,7 @@ export class Block2Component implements OnInit {
   }
 
   sendData(buttonId: number): void {
+    this.fetchData();
     if (this.radioSelection) {
       if (buttonId === 1) {
         this.replaceData();
@@ -46,6 +41,18 @@ export class Block2Component implements OnInit {
     } else {
       window.alert(`Wybierz opcję z bloku pierwszego.`);
       return;
+    }
+  }
+
+  fetchData(): void {
+    const storedData = localStorage.getItem('myData');
+    if (storedData) {
+      this.completeData = JSON.parse(storedData);
+    } else {
+      window.alert(
+        'Błąd: nie znaleziono danych w localStorage. Odświeżanie strony.'
+      );
+      window.location.reload();
     }
   }
 
@@ -82,8 +89,10 @@ export class Block2Component implements OnInit {
       if (!isItemAlreadyAdded) {
         this.displayedData.push(item);
       } else {
-        window.alert(`Wyprany element został już dodany. Wybierz inny.`);
+        window.alert(`Wybrany element został już dodany. Wybierz inny.`);
       }
+    } else {
+      window.alert(`Nie znaleziono elementu o ID ${this.radioSelection}.`);
     }
   }
 
@@ -110,9 +119,6 @@ export class Block2Component implements OnInit {
           window.alert(`Wyprany element został już dodany. Wybierz inny.`);
         }
       }
-    } else {
-      window.alert('Błąd: nie znaleziono danych w localStorage. Odświeżanie strony.');
-      window.location.reload();
     }
   }
 }

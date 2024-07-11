@@ -1,0 +1,23 @@
+<div class="modal-background" *ngIf="isShowEditModalVisible">
+  <div class="modal-content">
+	<div *ngIf="!showEditControls" class="main-window">
+		<label for="select">Wybierz ID obiektu:</label>
+		<select [(ngModel)]="selectedId">
+			<option *ngFor="let id of ids" [value]="id">{{id}}</option>
+		</select>
+		<div class="buttons">
+			<button (click)="editData()">Edytuj</button>
+			<button (click)="deleteData()">Usuń</button>
+			<button (click)="closeEditModal()">Anuluj</button>
+		</div>
+	</div>
+	<div *ngIf="showEditControls" class="edit-window">
+		<label for="textarea">Edytuj dane obiektu o ID {{selectedId}}:</label>
+		<textarea [(ngModel)]="inputValue"></textarea>
+		<div class="buttons">
+			<button (click)="saveData()">Zapisz</button>
+			<button (click)="closeEditModal()">Anuluj</button>
+		</div>
+	</div>
+  </div>
+</div>

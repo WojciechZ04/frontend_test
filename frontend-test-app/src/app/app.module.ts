@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { Block1Component } from './block1/block1.component';
 import { Block2Component } from './block2/block2.component';
 import { Block3Component } from './block3/block3.component';
+import { CreateModalComponent } from './create-modal/create-modal.component';
+import { EditModalComponent } from './edit-modal/edit-modal.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { Block3Component } from './block3/block3.component';
     Block1Component,
     Block2Component,
     Block3Component,
+    CreateModalComponent,
+    EditModalComponent,
   ],
   imports: [
     CommonModule,
