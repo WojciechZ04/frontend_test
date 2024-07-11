@@ -26,12 +26,8 @@ export class Block2Component implements OnInit {
     this.http.get<Item[]>('assets/data.json').subscribe((data) => {
       this.completeData = data;
 
-      console.log('THIS IS DATA', data);
 
-      const item = data.find((item) => item.id === 3);
-      if (item) {
-        this.displayedData.push(item);
-      }
+      this.pushRandomData();
       this.sendDataOnInit();
     });
   }
