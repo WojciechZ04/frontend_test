@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header [isPersonalDataVisible]="isPersonalDataVisible"></app-header>
 <main class="main">
   <div class="content">
     <h1>Nagłówek H1</h1>
@@ -10,4 +10,4 @@
     </div>
   </div>
 </main>
-<app-footer></app-footer>
+<app-footer (showPersonalDetails)="onShowPersonalDetails()"></app-footer>

@@ -11,6 +11,7 @@ export class AppComponent {
   clickedButtonValue: number = 0;
   selectedOption: string = '';
   receivedData: Data[] = [];
+  isPersonalDataVisible: boolean = false;
 
   onOptionSelected(selectedOption: string): void {
     this.selectedOption = selectedOption;
@@ -18,5 +19,9 @@ export class AppComponent {
 
   onReceiveData(data: Data[]): void {
     this.receivedData = data;
+  }
+
+  onShowPersonalDetails(): void {
+    this.isPersonalDataVisible = !this.isPersonalDataVisible;
   }
 }
