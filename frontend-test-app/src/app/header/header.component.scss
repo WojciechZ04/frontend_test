@@ -33,7 +33,8 @@
 			}
 		}
 		a {
-			font-size: 4rem; /* Adjust the size as needed */
+			display:contents; // Use flexbox for centering
+    		font-size: 4rem; // Adjust as needed
 			color: #fefefe;
 		}
 	}

@@ -90,18 +90,18 @@
 			z-index: 2;
 
 			button {
-				background-color: #15161a;
-				color: white;
-				border: none;
+				background-color: transparent;
+				color: gray;
+				border: 1px solid gray;
 				width: 10rem;
 				font-size: 1.5rem;
 				cursor: pointer;
 				padding: 1rem 2rem;
 				position: relative;
 				z-index: 2;
-				transition: background-color 0.5s ease;
 				&:hover {
-					background-color: #e88301;
+					border-color: white;
+					color: white;
 				}
 			}
 		}

@@ -1,24 +1,49 @@
-.buttons {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 10px;
-}
+.block {
 
-button {
-	background-color: transparent;
-	border: 1px solid #fff;
-	width: 80%;
-	margin: 0 auto;
-	padding: 1rem 5rem;
-	border-radius: 3px;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 600;
-	font-size: large;
-	color: #fff;
-	cursor: pointer;
+	h2 {
+		text-align: left;
+	}
 
-	&:hover {
-		background-color: orange;
+	@media (min-width: 400px) and (max-width: 959px) {
+		h2 {
+		  text-align: right;
+		}
+	  }
+	
+	  @media (min-width: 960px) {
+		h2 {
+		  text-align: center;
+		}
+	  }
+	
+	.buttons {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 10px;
+	}
+	
+	button {
+		background-color: transparent;
+		border: 1px solid #fff;
+		width: 80%;
+		margin: 0 auto;
+		padding: 1rem 5rem;
+		border-radius: 3px;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		font-size: large;
+		color: #fff;
+		cursor: pointer;
+		background-image: transparent; /* Example gradient */
+		transition: background-position 0.5s, box-shadow 0.5s; /* Smooth transition for hover effect */
+		
+		&:hover {
+			background-position: right center; /* Shifts the gradient on hover */
+			background-image: linear-gradient(to right, #cd7400, #fd9e23);
+			border-color: #ffdb65;
+		}
 	}
 }
+	
+	
