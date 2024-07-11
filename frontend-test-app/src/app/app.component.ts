@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Data } from './shared/data.model';
 
 @Component({
@@ -6,12 +7,23 @@ import { Data } from './shared/data.model';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'frontend-test-app';
   clickedButtonValue: number = 0;
   selectedOption: string = '';
   receivedData: Data[] = [];
   isPersonalDataVisible: boolean = false;
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    this.http.get<Data[]>('assets/data.json').subscribe((data) => {
+
+    if (!localStorage.getItem('myData')) {
+      localStorage.setItem('myData', JSON.stringify(data));
+    }
+  });
+  }
 
   onOptionSelected(selectedOption: string): void {
     this.selectedOption = selectedOption;

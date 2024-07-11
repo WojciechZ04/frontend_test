@@ -1,10 +1,5 @@
 import { Component, EventEmitter, Output, Input, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
-interface Item {
-  id: number;
-  text: string;
-}
+import { Data } from '../shared/data.model';
 
 @Component({
   selector: 'app-block2',
@@ -12,23 +7,26 @@ interface Item {
   styleUrl: './block2.component.scss',
 })
 export class Block2Component implements OnInit {
-  @Output() dataSent = new EventEmitter<Item[]>();
+  @Output() dataSent = new EventEmitter<Data[]>();
   @Output() buttonClicked = new EventEmitter<number>();
   @Input() radioSelection!: string;
   textToShow: string | undefined;
 
-  displayedData: Item[] = [];
-  completeData: Item[] = [];
+  displayedData: Data[] = [];
+  completeData: Data[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.http.get<Item[]>('assets/data.json').subscribe((data) => {
-      this.completeData = data;
+    const storedData = localStorage.getItem('myData');
+    if (storedData) {
+      this.completeData = JSON.parse(storedData);
+    } else {
+      console.log('No data found in localStorage. Reload the page.');
+    }
 
       this.pushRandomData();
       this.sendDataOnInit();
-    });
   }
 
   sendDataOnInit(): void {
@@ -112,6 +110,9 @@ export class Block2Component implements OnInit {
           window.alert(`Wyprany element został już dodany. Wybierz inny.`);
         }
       }
+    } else {
+      window.alert('Błąd: nie znaleziono danych w localStorage. Odświeżanie strony.');
+      window.location.reload();
     }
   }
 }
