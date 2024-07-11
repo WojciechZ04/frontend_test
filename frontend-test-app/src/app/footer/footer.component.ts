@@ -15,10 +15,11 @@ export class FooterComponent {
   }
 
   reset(): void {
-    window.location.reload(); // Refreshes the page
+    window.location.reload();
   }
 
   togglePersonalData() {
+    this.isPersonalDataVisible = !this.isPersonalDataVisible;
     this.showPersonalDetails.emit();
   }
 }

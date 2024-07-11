@@ -1,12 +1,11 @@
+@import './app/shared/variables';
+
+
 body {
 	margin: 0;
 	padding: 0;
-	color: #fefefe;
+	color: $secondary-color;
     font-family: 'Open Sans', sans-serif;
-}
-
-h2 {
-	text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 

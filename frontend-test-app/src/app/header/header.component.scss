@@ -1,3 +1,5 @@
+@import '../shared/variables';
+
 .header {
 	z-index: 1000;
 	display: flex;
@@ -5,8 +7,8 @@
  	align-items: center;
 	position: sticky;
 	top: 0;
-  	padding: 1rem 2rem;
-  	background-color: #0b0c10;
+  	padding: 1rem 3rem;
+  	background-color: $header-background-color;
 
 	#personalData{
 		font-weight: 100;
@@ -14,28 +16,28 @@
 
 	.right-content {
 		text-align: right;
-		font-size: 1.5rem; /* Adjust the size as needed */
+		font-size: 2rem;
 	}
 
 	.icon {
 		cursor: pointer;
-		background-color: #303030;
-		width: 6rem; // Example size, adjust as needed
-		height: 6rem; // Same as width to create a circle
+		background-color: $header-logo-background-color;
+		width: 6rem;
+		height: 6rem;
 		border-radius: 50%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		&:hover {
-			background-color: #e88301;
+			background-color: $accent-color;
 			a {
 				font-size: 4.5rem;
 			}
 		}
 		a {
-			display:contents; // Use flexbox for centering
-    		font-size: 4rem; // Adjust as needed
-			color: #fefefe;
+			display:contents;
+    		font-size: 4rem;
+			color: $secondary-color;
 		}
 	}
 }

@@ -1,14 +1,15 @@
 .content {
 	background-color: #2a2d36;
-	padding: 1rem;
 	min-height: 100vh;
+	padding-top: 3rem;
 
 	h1 {
 		font-weight: 400;
 		text-align: center;
 		margin: 0;
 		padding: 1rem;
-		text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+		text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+		font-size: 3rem;
 	}
 
 	hr {
@@ -25,11 +26,16 @@
 	
   .block {
 	padding: 3rem;
-	flex: 1 1 25vw;
-	min-width: 300px;
+	flex: 1 1 auto; // Allows blocks to grow and shrink
+	min-width: 200px; // Ensures blocks don't shrink below 320px
   }
 
 .footer {
 	height: 60px;
 }
 
+@media (min-width: 960px) {
+	.block {
+	  flex: 1 1 0%; // Allows blocks to grow to fill the available space equally
+	}
+  }

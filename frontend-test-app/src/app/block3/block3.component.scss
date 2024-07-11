@@ -1,15 +1,25 @@
+@import '../shared/variables';
+
 .block {
 	width: 100%;
 
 	h2 {
+		text-align: left;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		max-width: 100%;
+		padding-bottom: 3rem;
 	  }
 
 	article {
-		color: gray;
+		color: $neutral-color;
 		text-align: center;
 	}
+
+	@media (min-width: 620px) {
+		h2 {
+		  text-align: center;
+		}
+	  }
 }

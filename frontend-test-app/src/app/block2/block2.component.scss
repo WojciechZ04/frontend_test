@@ -1,20 +1,13 @@
+@import '../shared/variables';
+
 .block {
 
 	h2 {
 		text-align: left;
+		padding-bottom: 3rem;
 	}
 
-	@media (min-width: 400px) and (max-width: 959px) {
-		h2 {
-		  text-align: right;
-		}
-	  }
 	
-	  @media (min-width: 960px) {
-		h2 {
-		  text-align: center;
-		}
-	  }
 	
 	.buttons {
 		display: flex;
@@ -25,25 +18,49 @@
 	
 	button {
 		background-color: transparent;
-		border: 1px solid #fff;
-		width: 80%;
-		margin: 0 auto;
-		padding: 1rem 5rem;
+		border: 1px solid $secondary-color;
+		width: 100%;
+		margin: 0 auto 0 0;
+		padding: 1rem 2rem;
 		border-radius: 3px;
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 600;
 		font-size: large;
-		color: #fff;
+		color: $neutral-color;
 		cursor: pointer;
 		background-image: transparent; /* Example gradient */
 		transition: background-position 0.5s, box-shadow 0.5s; /* Smooth transition for hover effect */
 		
 		&:hover {
+			color: $secondary-color;
 			background-position: right center; /* Shifts the gradient on hover */
-			background-image: linear-gradient(to right, #cd7400, #fd9e23);
+			background-image: linear-gradient(to right, #b66802, #fd9e23);
 			border-color: #ffdb65;
 		}
 	}
+
+	@media (min-width: 620px) and (max-width: 959px) {
+		h2 {
+		  text-align: right;
+		}
+		button {
+			margin: 0 0 0 auto;
+		}
+	  }
+	
+	  @media (min-width: 960px) {
+		h2 {
+		  text-align: center;
+		}
+		button {
+			margin: 0 auto 0 auto;
+		}
+
+		.buttons {
+			flex-direction: row;
+			gap: 2rem;
+		}
+	  }
 }
 	
 	
