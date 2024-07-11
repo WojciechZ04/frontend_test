@@ -26,8 +26,8 @@
 	
   .block {
 	padding: 3rem;
-	flex: 1 1 auto; // Allows blocks to grow and shrink
-	min-width: 200px; // Ensures blocks don't shrink below 320px
+	flex: 1 1 auto;
+	min-width: 200px;
   }
 
 .footer {
@@ -36,6 +36,6 @@
 
 @media (min-width: 960px) {
 	.block {
-	  flex: 1 1 0%; // Allows blocks to grow to fill the available space equally
+	  flex: 1 1 0%;
 	}
   }

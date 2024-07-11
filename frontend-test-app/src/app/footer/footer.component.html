@@ -11,13 +11,22 @@
       <p>nabthat</p>
     </div>
     <div id="selection-button">
-        <button (click)="toggleViewport()">POKAŻ <i class="fas fa-angle-down" [class.rotated]="isViewportVisible"></i></button>
+      <button (click)="toggleViewport()">
+        POKAŻ
+        <i class="fas fa-angle-down" [class.rotated]="isViewportVisible"></i>
+      </button>
     </div>
   </div>
-  <div class="selection-viewport" [class.is-viewport-visible]="isViewportVisible">
-    <p (click)="reset()"><i class="fas fa-angle-right"></i> ZRESETUJ USTAWIENIA</p>
-    <p (click)="togglePersonalData()"><i class="fas fa-angle-right"></i> 
-      {{isPersonalDataVisible ? 'UKRYJ' : 'POKAŻ'}} DANE OSOBOWE
+  <div
+    class="selection-viewport"
+    [class.is-viewport-visible]="isViewportVisible"
+  >
+    <p (click)="reset()">
+      <i class="fas fa-angle-right"></i> ZRESETUJ USTAWIENIA
+    </p>
+    <p (click)="togglePersonalData()">
+      <i class="fas fa-angle-right"></i>
+      {{ isPersonalDataVisible ? "UKRYJ" : "POKAŻ" }} DANE OSOBOWE
     </p>
   </div>
 </div>

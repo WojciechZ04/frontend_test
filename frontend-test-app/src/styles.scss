@@ -1,6 +1,5 @@
 @import './app/shared/variables';
 
-
 body {
 	margin: 0;
 	padding: 0;
@@ -8,14 +7,13 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-
 p {
     display: block;
-    margin-block-start: 0; /* Override default margin at the start of a block */
-    margin-block-end: 0; /* Override default margin at the end of a block */
-    margin-inline-start: 0; /* Override default margin at the start of an inline */
-    margin-inline-end: 0; /* Override default margin at the end of an inline */
-    unicode-bidi: normal; /* Override default unicode-bidi if needed */
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    unicode-bidi: normal; 
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

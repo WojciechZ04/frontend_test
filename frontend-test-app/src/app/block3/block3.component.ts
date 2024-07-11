@@ -1,9 +1,4 @@
-import {
-  Component,
-  OnChanges,
-  SimpleChanges,
-  Input,
-} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Data } from '../shared/data.model';
 
 @Component({
@@ -13,12 +8,4 @@ import { Data } from '../shared/data.model';
 })
 export class Block3Component {
   @Input() data: Data[] = [];
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('Changes detected:', changes);
-
-    if ((changes['data'])) {
-      console.log();
-    }
-  }
 }

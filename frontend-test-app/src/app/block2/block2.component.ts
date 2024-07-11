@@ -26,7 +26,6 @@ export class Block2Component implements OnInit {
     this.http.get<Item[]>('assets/data.json').subscribe((data) => {
       this.completeData = data;
 
-
       this.pushRandomData();
       this.sendDataOnInit();
     });
@@ -100,10 +99,8 @@ export class Block2Component implements OnInit {
       )
       .map((item) => item.id);
     if (notDisplayedIds.length > 0) {
-      // Losowanie id z listy nie wyświetlonych
       const randomId =
         notDisplayedIds[Math.floor(Math.random() * notDisplayedIds.length)];
-      // Znalezienie i dodanie elementu do displayedData
       const item = this.completeData.find((item) => item.id === randomId);
       if (item) {
         const isItemAlreadyAdded = this.displayedData.some(

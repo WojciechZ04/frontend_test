@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router'; // If you're using RouterOutlet, RouterModule needs to be imported
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -19,16 +19,16 @@ import { Block3Component } from './block3/block3.component';
     FooterComponent,
     Block1Component,
     Block2Component,
-    Block3Component
+    Block3Component,
   ],
   imports: [
-	CommonModule,
-	FormsModule,
+    CommonModule,
+    FormsModule,
     BrowserModule,
-	HttpClientModule,
-    RouterModule.forRoot([]) // Configure your routes as needed
+    HttpClientModule,
+    RouterModule.forRoot([]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

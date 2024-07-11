@@ -9,8 +9,6 @@
 	position: relative;
 	z-index: 3;
 	
-	
-	
 	.footer-content {
 		border-top: 2px solid $footer-border-color;
 		padding: 1rem 3rem;
@@ -65,8 +63,6 @@
 		}
 
     }
-
-	
 
 	#nabthat {
 		position: absolute;
@@ -139,7 +135,7 @@
 	}
   }
 
-}
+	}
 
   .selection-viewport {
 	position: absolute;
@@ -169,10 +165,10 @@
 			color: $accent-color;
 		}
 	}
-}
+	}
 
-.is-viewport-visible {
-	transform: translateY(-110%);
-}
+	.is-viewport-visible {
+		transform: translateY(-110%);
+	}
 }
 

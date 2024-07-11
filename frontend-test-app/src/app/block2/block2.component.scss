@@ -7,8 +7,6 @@
 		padding-bottom: 3rem;
 	}
 
-	
-	
 	.buttons {
 		display: flex;
 		flex-direction: column;
@@ -28,12 +26,12 @@
 		font-size: large;
 		color: $neutral-color;
 		cursor: pointer;
-		background-image: transparent; /* Example gradient */
-		transition: background-position 0.5s, box-shadow 0.5s; /* Smooth transition for hover effect */
+		background-image: transparent;
+		transition: background-position 0.5s, box-shadow 0.5s;
 		
 		&:hover {
 			color: $secondary-color;
-			background-position: right center; /* Shifts the gradient on hover */
+			background-position: right center;
 			background-image: linear-gradient(to right, #b66802, #fd9e23);
 			border-color: #ffdb65;
 		}

@@ -1,3 +1,3 @@
 export class Data {
-	constructor(public id: number, public text: string) {}
+  constructor(public id: number, public text: string) {}
 }
