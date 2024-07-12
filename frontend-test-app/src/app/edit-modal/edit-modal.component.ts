@@ -61,10 +61,8 @@ export class EditModalComponent implements OnInit {
     const existingIndex = myData.findIndex((item: Data) => item.id === selectedIdNumber);
   
     if (existingIndex !== -1) {
-      // Update existing item
       myData[existingIndex] = newData;
     } else {
-      // Add new item
       myData.push(newData);
     }
   
@@ -73,6 +71,7 @@ export class EditModalComponent implements OnInit {
     this.selectedId = null;
     this.showEditControls = false;
     this.closeEditModal();
+    window.location.reload();
   }
 
   deleteData() {

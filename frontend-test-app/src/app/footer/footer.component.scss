@@ -3,7 +3,7 @@
 .footer {
 	background-color: $footer-background-color;
 	display: flex;
-	height: 12vh;
+	height: 15vh;
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
@@ -71,7 +71,7 @@
   		transform: translate(-50%, -50%);
 		text-align: center;
 		p {
-			font-size: 2rem;
+			font-size: 1.5rem;
 			&::before,
 			&::after {
 				content: '';
@@ -101,13 +101,14 @@
 		position: relative;
 		height: 100%;
 		z-index: 2;
+		
 
 		button {
 			background-color: transparent;
 			color: $neutral-color;
 			border: 1px solid $footer-content-color;
 			border-radius: 5px;
-			width: 17rem;
+			width: 19rem;
 			font-size: 1rem;
 			font-weight: bold;
 			cursor: pointer;
@@ -138,18 +139,20 @@
 	}
 
   .selection-viewport {
+	font-weight: 500;
 	position: absolute;
 	margin: 0 3rem;
 	padding: 1rem;
 	right: 0;
-	width: 15rem;
-	height: 17vh;
+	width: 17rem;
+	height: 13vh;
 	top: 0;
 	background-color: $secondary-color;
 	box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3), 5px 0 15px rgba(0, 0, 0, 0.3), -5px 0 15px rgba(0, 0, 0, 0.3);
-	display: none;
+	display: flex;
+	flex-direction: column;
 	transform: translateY(0%);
-	transition: transform 0.5s display 0.5s ease;
+	transition: transform 0.5s ease;
 
 	z-index: 1;
 
@@ -167,8 +170,6 @@
 	}
 
 	.is-viewport-visible {
-		display: flex;
-		flex-direction: column;
 		transform: translateY(-100%);
 	}
 }

@@ -26,6 +26,7 @@ export class CreateModalComponent {
     localStorage.setItem('myData', JSON.stringify(myData));
 
     this.closeCreateModal();
+    window.location.reload();
   }
 
   closeCreateModal() {
